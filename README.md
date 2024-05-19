@@ -1,3 +1,54 @@
+**Running the Task Management Application**
+
+**Prerequisites:**
+
+- **Node.js and npm (or yarn):** Make sure you have Node.js installed on your system. You can check by running `node -v` and `npm -v` (or `yarn -v`) in your terminal. If you don't have it, download and install it from the official Node.js website.
+- **MySQL Server:** Ensure you have a MySQL server running and accessible. You should have created a database named `task_db` (or adjusted the configuration to match your database name).
+- **Environment Variables:** Create a `.env` file in the root directory of your project to store sensitive information like database credentials. This file should contain the following:
+
+```
+PORT=8000
+DB_HOST=host
+DB_USER=user
+DB_PASSWORD=YOURPASSWORD
+DB_NAME=task_db
+```
+
+**Steps:**
+
+1. **Clone or download the project:**
+
+   ```bash
+   git clone <your_repository_url>
+   cd task-api
+   ```
+
+2. **Install dependencies:**
+
+   ```bash
+   npm install
+   ```
+
+3. **Start the server:**
+
+   ```bash
+   npm start
+   ```
+
+   The server should start running on the port specified in your `.env` file (default is 8000).
+
+**Endpoints:**
+
+You can now interact with the API using tools like Postman, curl, or your frontend application. Refer to the API documentation for details on each endpoint.
+
+**Additional Notes:**
+
+- **Running with Nodemon (for development):** If you'd like the server to restart automatically when you make changes to your code, you can use Nodemon:
+  ```bash
+  npm install -g nodemon
+  nodemon server.js
+  ```
+
 **Task Management API Documentation**
 
 **Base URL:** `/user/tasks`
